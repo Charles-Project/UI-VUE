@@ -1,28 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <campaign />
+    <graphic />
+    <convertproof />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import campaign from "./components/campaign-con/campaign";
+import graphic from "./components/graphic-con/graphic";
+import convertproof from "./components/convert-con/convertproof";
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    campaign,
+    graphic,
+    convertproof
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
