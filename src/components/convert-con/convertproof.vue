@@ -5,8 +5,8 @@
   </div>
 </template>
 <script>
-import convertCard from "./convertCard";
-import convertitem from './convertitems'
+import convertCard from "./card-con/convertCard";
+import convertitem from "./conitems-con/convertitems";
 export default {
   components: {
     convertCard,

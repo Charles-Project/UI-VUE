@@ -1,52 +1,54 @@
 <template>
   <!-- ------ convert proof 1 header ------ -->
   <div class="container">
-    <div class="cvtproof d-flex justify-content-between py-4 px-4">
-      <div class="cvtproof-brand d-flex align-items-center">
-        <span class="cvtproof-icon mr-1 mr-sm-4" v-on:click="cambodyOff">
-          <i class="fas fa-caret-left"></i>
-        </span>
-        <div class="cnvtproof-text">
-          <h6 class="text-uppercase txt-h6">Convertproof</h6>
-          <h6>Configure CTA Widgets</h6>
+    <div id="cvtproof">
+      <div class="cvtproof d-flex justify-content-between py-4 px-4">
+        <div class="cvtproof-brand d-flex align-items-center">
+          <span class="cvtproof-icon mr-1 mr-sm-4">
+            <i class="fas fa-caret-left"></i>
+          </span>
+          <div class="cnvtproof-text">
+            <h6 class="text-uppercase txt-h6">Convertproof</h6>
+            <h6>Configure CTA Widgets</h6>
+          </div>
+        </div>
+        <div class="cvtproof-widget d-flex">
+          <button type="button" class="btn btn-primary btn-sm mr-sm-3 mr-0">Add Widgets</button>
+          <span class="cvtproof__fa pt-2">
+            <i class="fa fa-ellipsis-h"></i>
+          </span>
         </div>
       </div>
-      <div class="cvtproof-widget d-flex">
-        <button type="button" class="btn btn-primary btn-sm mr-sm-3 mr-0">Add Widgets</button>
-        <span class="cvtproof__fa pt-2">
-          <i class="fa fa-ellipsis-h"></i>
-        </span>
-      </div>
-    </div>
-    <!--  -->
-    <div class="status-container bg-white">
-      <div class="status-page">
-        <div class="row pl-4">
-          <div class="col-md-6">
-            <div class="status-icon d-flex pt-3">
-              <p class="text-uppercase mr-3">status</p>
-              <div>
-                <label class="switch">
-                  <input type="checkbox" checked />
-                  <span class="slider round"></span>
-                </label>
+      <!--  -->
+      <div class="status-container bg-white">
+        <div class="status-page">
+          <div class="row pl-4">
+            <div class="col-md-6">
+              <div class="status-icon d-flex pt-3">
+                <p class="text-uppercase mr-3">status</p>
+                <div>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
               </div>
+              <h4>Buy page</h4>
             </div>
-            <h4>Buy page</h4>
-          </div>
-          <div class="col-md-6 pr-lg-5">
-            <div class="d-flex justify-content-between py-sm-2 pr-3 pr-md-5 campaign-body">
-              <div class="d-flex flex-column justify-content-center align-items-center">
-                <h4 class="status-number mb-1 text-danger">{{cam[1]}}</h4>
-                <p class="status-text text-secondary text-uppercase">views</p>
-              </div>
-              <div class="d-flex flex-column justify-content-center align-items-center">
-                <h4 class="status-number mb-1 text-primary">{{cam[2]}}</h4>
-                <p class="status-text text-secondary text-uppercase">clicks</p>
-              </div>
-              <div class="d-flex flex-column justify-content-center align-items-center">
-                <h4 class="status-number mb-1 text-bright">{{cam[3]}}</h4>
-                <p class="status-text text-secondary text-uppercase">leads</p>
+            <div class="col-md-6 pr-lg-5">
+              <div class="d-flex justify-content-between py-sm-2 pr-3 pr-md-5 campaign-body">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <h4 class="status-number mb-1 text-danger">{{cam[1]}}</h4>
+                  <p class="status-text text-secondary text-uppercase">views</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <h4 class="status-number mb-1 text-primary">{{cam[2]}}</h4>
+                  <p class="status-text text-secondary text-uppercase">clicks</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <h4 class="status-number mb-1 text-bright">{{cam[3]}}</h4>
+                  <p class="status-text text-secondary text-uppercase">leads</p>
+                </div>
               </div>
             </div>
           </div>
@@ -57,12 +59,7 @@
 </template>
 <script>
 export default {
-  props: ["cam"],
-  methods: {
-    cambodyOff: function() {
-      this.$emit("update-d", false);
-    }
-  }
+  props: ["cam"]
 };
 </script>
 <style scoped>

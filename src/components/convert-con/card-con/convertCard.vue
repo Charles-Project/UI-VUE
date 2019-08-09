@@ -1,54 +1,36 @@
 <template>
   <div class="container pt-3 mb-4">
     <div class="row">
-      <!-- 1st card -->
-      <div class="col-sm-4 mb-3">
-        <div class="card">
-          <div class="card-body card-bg d-flex justify-content-between align-items-center">
-            <div class="card-icon icon-bg">
-              <i class="far fa-user"></i>
-            </div>
-            <div class="card-text">
-              <h3>12,000</h3>
-              <p>Visitors</p>
-            </div>
-          </div>
-        </div>
+      <!-- card component -->
+      <div class="col-sm-4 mb-3" v-for="(color, i) in bgColors">
+        <cardCom
+          :bgcolor="color"
+          :icon="icons[i]"
+          :iconBg="iconBgs[i]"
+          :cardtextH="cardH"
+          :cardtextP="cardP"
+        />
       </div>
-      <!-- 2nd card -->
-      <div class="col-sm-4 mb-3">
-        <div class="card">
-          <div class="card-body card-bg1 d-flex justify-content-between align-items-center">
-            <div class="card-icon icon-bg1">
-              <i class="far fa-envelope"></i>
-            </div>
-            <div class="card-text">
-              <h3>12,000</h3>
-              <p>Visitors</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 3rd card -->
-      <div class="col-sm-4 mb-3">
-        <div class="card">
-          <div class="card-body card-bg2 d-flex justify-content-between align-items-center">
-            <div class="card-icon icon-bg2">
-              <i class="far fa-user"></i>
-            </div>
-            <div class="card-text">
-              <h3>12,000</h3>
-              <p>Visitors</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end -->
     </div>
   </div>
 </template>
 <script>
-export default {};
+import cardCom from "./cardCom";
+export default {
+  components: {
+    cardCom
+  },
+  data: function() {
+    return {
+      bgColors: ["card-bg", "card-bg1", "card-bg2"],
+      icons: ["fa-user", "fa-envelope", "fa-user"],
+      iconBgs: ["icon-bg", "icon-bg1", "icon-bg2"],
+      iconColors: ["text-primary", "text-danger", "text-success"],
+      cardH: "12000",
+      cardP: "Visitors"
+    };
+  }
+};
 </script>
 <style>
 /*  --------------------- styles for cards --------------------------------*/
@@ -135,14 +117,8 @@ export default {};
 }
 
 /*  --------------------- styles for cards --------------------------------*/
-*
-  -------------------
-  media
-  queries
-  -------------------------------------
-  */
-  @media
-  (max-width: 991px) {
+
+@media (max-width: 991px) {
   .card-text h3 {
     font-size: 1.7rem;
     font-weight: 400;
