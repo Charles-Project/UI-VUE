@@ -1,17 +1,17 @@
 <template>
   <div class="container-fluid">
-    <camHeader />
-    <camBody :cam="stat" />
+    <CamHeader />
+    <CamBody :cam="stat" />
   </div>
 </template>
 <script>
-import camHeader from "./camHeader";
-import camBody from "./camBody";
+import CamHeader from "./CamHeader";
+import CamBody from "./CamBody";
 
 export default {
   components: {
-    camHeader,
-    camBody
+    CamHeader,
+    CamBody
   },
   data: function() {
     return {

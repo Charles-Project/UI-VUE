@@ -1,21 +1,27 @@
 <template>
   <div>
-    <campaign />
+    <CampaignWrapper />
     <graphic />
     <convertproof />
+    <RewardCon />
+    <VisitFacebook />
   </div>
 </template>
 
 <script>
-import campaign from "./components/campaign-con/campaign";
+import CampaignWrapper from "./components/campaign-con/CampaignWrapper";
 import graphic from "./components/graphic-con/graphic";
 import convertproof from "./components/convert-con/convertproof";
+import RewardCon from "./components/Rewards/RewardCon";
+import VisitFacebook from "./components/visit-facebook/VisitFacebook";
 export default {
   name: "app",
   components: {
-    campaign,
+    CampaignWrapper,
     graphic,
-    convertproof
+    convertproof,
+    RewardCon,
+    VisitFacebook
   }
 };
 </script>

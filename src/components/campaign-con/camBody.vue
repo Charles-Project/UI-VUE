@@ -15,7 +15,7 @@
 
         <div class="col-sm-6">
           <div class="d-flex justify-content-between py-sm-4 pr-1 pr-md-5 campaign-body">
-            <camStat :cama="cam" />
+            <CamStatistics :cama="cam" />
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
               <h4>Buy page</h4>
             </div>
             <div class="col-md-6 pr-lg-5">
-              <camStat :cama="cam" />
+              <CamStatistics :cama="cam" />
             </div>
           </div>
         </div>
@@ -72,10 +72,10 @@
   </div>
 </template>
 <script>
-import camStat from "./camStat";
+import CamStatistics from "./CamStatistics";
 export default {
   components: {
-    camStat
+    CamStatistics
   },
   props: ["cam"],
   data() {
