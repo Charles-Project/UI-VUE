@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-6 col-lg-4 mr-1 mb-3">
+  <div class="col-md-6 col-lg-4 mr-0 my-3">
     <div class="card d-flex justify-content-between flex-row">
       <div class="card-main">
         <h3>Visit Us on Facebook</h3>
@@ -20,12 +20,17 @@
       </div>
       <div class="line-div"></div>
       <div class="card-points">
-        <h3>50</h3>
+        <h3>{{points}}</h3>
         <h5 class="text-uppercase">Points</h5>
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: ["points"]
+};
+</script>
 <style scoped>
 .card {
   display: flex;

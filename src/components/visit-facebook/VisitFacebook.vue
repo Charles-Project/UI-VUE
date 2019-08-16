@@ -1,9 +1,9 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <VisitCard />
-      <VisitCard />
-      <VisitCard />
+      <VisitCard :points="points" />
+      <VisitCard :points="points" />
+      <VisitCard :points="points" />
     </div>
   </div>
 </template>
@@ -12,6 +12,11 @@ import VisitCard from "./VisitCard";
 export default {
   components: {
     VisitCard
+  },
+  data: function() {
+    return {
+      points: "500"
+    };
   }
 };
 </script>
