@@ -1,27 +1,31 @@
 <template>
-  <div class="col-md-6 col-lg-4 mr-0 my-3">
-    <div class="card d-flex justify-content-between flex-row">
+  <div class="col-sm-6 col-lg-4 mb-5">
+    <div class="card">
       <div class="card-main">
-        <h3>Visit Us on Facebook</h3>
-        <div class="card-icons d-flex justify-content-between">
+        <div>
+          <h3 class="text-capitalize">Visit us on facebook</h3>
+        </div>
+        <div class="card-icons">
           <div class="card-edit">
-            <p>edit</p>
             <i class="fas fa-pen"></i>
-          </div>`
+            <div>edit</div>
+          </div>
           <div class="card-duplicate">
-            <p>duplicate</p>
             <i class="far fa-clone"></i>
+            <div>duplicate</div>
           </div>
           <div class="card-delete">
-            <p>delete</p>
             <i class="far fa-trash-alt"></i>
+            <div>delete</div>
           </div>
         </div>
       </div>
-      <div class="line-div"></div>
-      <div class="card-points">
-        <h3>{{points}}</h3>
-        <h5 class="text-uppercase">Points</h5>
+      <div class="card-pointer">
+        <div class="card-line"></div>
+        <div class="card-points">
+          <h4 class="text-primary text-center">{{points}}</h4>
+          <h5 class="text-uppercase text-center">Points</h5>
+        </div>
       </div>
     </div>
   </div>
@@ -34,73 +38,167 @@ export default {
 <style scoped>
 .card {
   display: flex;
-  width: 25rem;
-  padding: 0.5rem 0.5rem 0.5rem 3rem;
-  position: relative;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem 1rem 2.9rem;
 }
-
 .card-main {
-  opacity: 0.7;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  width: 65%;
-  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 62%;
 }
 
-.card-main div {
+.card-main h3 {
+  font-size: 1.2rem;
+  color: #7a879b;
+  margin-bottom: 0.5rem;
+}
+.card-icons {
+  display: flex;
+  justify-content: space-between;
   background: #f8f8f8;
-  padding: 0 5px;
 }
 
-.card-main div .card-edit,
+.card-duplicate,
 .card-delete,
-.card-duplicate {
+.card-edit {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 5px 8px;
 }
 
-.card-main p {
-  order: 2;
-  margin-left: 3px;
-  margin-top: 14px;
+.card-duplicate div,
+.card-delete div,
+.card-edit div {
+  font-size: 12px;
+  font-weight: 500;
 }
 
-.card-main h3 {
-  text-align: center;
+.card-duplicate i,
+.card-delete i,
+.card-edit i {
+  padding-right: 3px;
+  font-size: 11px;
 }
 
-.card-main .far,
-.fas {
-  font-size: 10px;
+.card-pointer {
+  display: flex;
 }
 
-.card-main h3 {
-  font-size: 1.3rem;
+.card-line {
+  width: 2px;
+  background: #e0e2e8;
+  height: 90px;
 }
-
 .card-points {
+  padding-left: 25px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.card-points h3 {
-  color: #304cff;
-  font-size: 1.5rem;
+.card-points h4 {
+  font-size: 1.7rem;
+  font-weight: 500;
   margin-bottom: 0;
 }
 
 .card-points h5 {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-.line-div {
-  height: 90px;
-  width: 3px;
-  background: #e0e2e8;
-  position: absolute;
-  left: 77%;
+/* media */
+@media (max-width: 1145px) {
+  .card {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.4rem 1rem 1.9rem;
+  }
+
+  .card-main h3 {
+    font-size: 1rem;
+  }
+
+  .card-duplicate div,
+  .card-delete div,
+  .card-edit div {
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .card-duplicate i,
+  .card-delete i,
+  .card-edit i {
+    padding-right: 2px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 991px) {
+  .card-main {
+    width: 70%;
+  }
+
+  .card-main h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 774px) {
+  .card {
+    padding: 1rem 1.5rem 1rem 2.3rem;
+  }
+
+  .card-main {
+    width: 60%;
+  }
+
+  .card-main h3 {
+    font-size: 0.9rem;
+  }
+
+  .card-points h4 {
+    font-size: 1.15rem;
+  }
+
+  .card-points h5 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 687px) {
+  .card {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .card-main {
+    width: 70%;
+  }
+
+  .card-main h3 {
+    font-size: 0.9rem;
+  }
+
+  .card-points h4 {
+    font-size: 1.15rem;
+  }
+
+  .card-points h5 {
+    font-size: 0.8rem;
+  }
+
+  .card-points {
+    padding-left: 15px;
+  }
 }
 </style>

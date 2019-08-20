@@ -2,8 +2,10 @@
   <div class="col-md-6 col-lg-4 mb-4">
     <div class="card d-flex flex-row justify-content-start">
       <div class="card-img"></div>
-      <h5>Reward Title for the stuff</h5>
-      <button class="bttn bttn-radius">entry</button>
+      <div class="card-main ml-1">
+        <h5>Reward Title for the stuff</h5>
+        <div class="entr entr-radius">entry</div>
+      </div>
     </div>
   </div>
 </template>
@@ -12,7 +14,6 @@
   padding: 12px 0 12px 10px;
   border-radius: 10px;
   flex: 1;
-  position: relative;
 }
 
 .card-img {
@@ -22,24 +23,30 @@
   border-radius: 50%;
 }
 
-.card h5 {
+.card-main {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.card-main h5 {
   font-size: 14px;
   margin-left: 7px;
+  margin-bottom: 14px;
   color: #c1cad5;
 }
 
-.bttn-radius {
+.entr-radius {
+  width: 75px;
   border-radius: 20px;
   background: #2da6ba;
   color: whitesmoke;
   font-size: 12px;
-  padding: 2px 20px 4px 20px;
-  position: absolute;
-  top: 56%;
-  left: 70%;
+  padding: 3px 0;
   border: none;
+  text-align: center;
   text-transform: uppercase;
   cursor: none;
+  margin-left: auto;
 }
 
 /* ----------- rewards item div for the cards and add rewards ------------------------- */
@@ -92,29 +99,19 @@
     font-size: 12px;
   }
 
-  .bttn-radius {
+  /* .entr-radius {
     top: 58%;
     left: 65%;
     padding: 1px 18px 3px 18px;
     border-radius: 20px;
     font-size: 11px;
-  }
-
-  .bttn-square {
-    font-size: 10px;
-    padding: 3px 10px 4px 10px;
-    left: 62%;
-  }
+  } */
 }
 
 @media (max-width: 1098px) {
-  .bttn-radius {
+  /* .entr-radius {
     left: 61%;
-  }
-
-  .bttn-square {
-    left: 58%;
-  }
+  } */
 
   .rewardAdd {
     right: -15px;
@@ -131,17 +128,13 @@
     font-size: 14px;
   }
 
-  .bttn-radius {
+  /* .entr-radius {
     top: 58%;
     left: 66%;
     padding: 2px 20px 4px 20px;
     border-radius: 20px;
     font-size: 12px;
-  }
-
-  .bttn-square {
-    left: 65%;
-  }
+  } */
 
   .mLine {
     height: 24rem;
@@ -152,13 +145,9 @@
 }
 
 @media (max-width: 871px) {
-  .bttn-radius {
+  /* .entr-radius {
     left: 62%;
-  }
-
-  .bttn-square {
-    left: 58%;
-  }
+  } */
 
   .rewardAdd {
     width: 79px;
@@ -175,12 +164,10 @@
 }
 
 @media (max-width: 822px) {
-  .bttn-radius {
-    /* top: 58%;
-    left: 65%; */
+  /* .entr-radius {
     padding: 1px 18px 3px 18px;
     border-radius: 20px;
     font-size: 10px;
-  }
+  } */
 }
 </style>

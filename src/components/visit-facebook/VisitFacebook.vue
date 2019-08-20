@@ -5,6 +5,12 @@
       <VisitCard :points="points" />
       <VisitCard :points="points" />
     </div>
+
+    <div class="row">
+      <Visit />
+      <Visit />
+      <Visit />
+    </div>
   </div>
 </template>
 <script>
