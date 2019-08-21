@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <VisitCard :points="points" />
       <VisitCard :points="points" />

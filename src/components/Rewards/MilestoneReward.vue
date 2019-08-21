@@ -20,6 +20,10 @@
             <i class="fa fa-ellipsis-h fas-absolute"></i>
           </span>
         </div>
+        <div class="d-sm-none d-flex mb-4 pl-2">
+          <h5 class="text-center pr-3">Milestone</h5>
+          <div class="btn-entry">Entry</div>
+        </div>
         <h5 class="hh5">Rewards</h5>
         <div class="rewardItems d-flex justify-content-between pl-0">
           <div class="row rewardCards">
@@ -141,6 +145,17 @@ export default {
 }
 
 /*  */
+.btn-entry {
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  border: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  background-color: #e2e4ee;
+  border-radius: 3px;
+  font-weight: 500;
+}
 
 .btnn {
   padding: 3px 26px;
@@ -310,6 +325,10 @@ export default {
 
   .rewardCon h5 {
     font-size: 10px;
+  }
+
+  .titleMiles {
+    margin-bottom: 2rem;
   }
 }
 

@@ -42,14 +42,15 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.4rem 1rem 2.9rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .card-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 62%;
+  width: 75%;
 }
 
 .card-main h3 {
@@ -88,43 +89,37 @@ export default {
 
 .card-pointer {
   display: flex;
+  width: 25%;
 }
 
 .card-line {
-  width: 2px;
+  width: 3%;
   background: #e0e2e8;
-  height: 90px;
+  height: 80px;
 }
 .card-points {
-  padding-left: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 96%;
 }
 
 .card-points h4 {
   font-size: 1.7rem;
   font-weight: 500;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .card-points h5 {
   font-size: 1rem;
   font-weight: 500;
+  text-align: center;
 }
 
 /* media */
 @media (max-width: 1145px) {
-  .card {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.4rem 1rem 1.9rem;
-  }
-
   .card-main h3 {
     font-size: 1rem;
   }
@@ -145,24 +140,12 @@ export default {
 }
 
 @media (max-width: 991px) {
-  .card-main {
-    width: 70%;
-  }
-
   .card-main h3 {
     font-size: 1.2rem;
   }
 }
 
 @media (max-width: 774px) {
-  .card {
-    padding: 1rem 1.5rem 1rem 2.3rem;
-  }
-
-  .card-main {
-    width: 60%;
-  }
-
   .card-main h3 {
     font-size: 0.9rem;
   }
@@ -177,14 +160,6 @@ export default {
 }
 
 @media (max-width: 687px) {
-  .card {
-    padding: 1rem 1rem 1rem 1rem;
-  }
-
-  .card-main {
-    width: 70%;
-  }
-
   .card-main h3 {
     font-size: 0.9rem;
   }
@@ -196,9 +171,46 @@ export default {
   .card-points h5 {
     font-size: 0.8rem;
   }
+}
 
-  .card-points {
-    padding-left: 15px;
+@media (max-width: 576px) {
+  .card-main h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-duplicate div,
+  .card-delete div,
+  .card-edit div {
+    font-size: 12px;
+  }
+
+  .card-duplicate i,
+  .card-delete i,
+  .card-edit i {
+    padding-right: 3px;
+    font-size: 11px;
+  }
+
+  .card-points h4 {
+    font-size: 1.7rem;
+  }
+
+  .card-points h5 {
+    font-size: 1rem;
   }
 }
+
+/* @media (max-width: 454px) {
+  .card-main h3 {
+    font-size: 0.9rem;
+  }
+
+  .card-points h4 {
+    font-size: 1.15rem;
+  }
+
+  .card-points h5 {
+    font-size: 0.8rem;
+  }
+} */
 </style>
