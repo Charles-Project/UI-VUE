@@ -119,9 +119,17 @@ export default {
 }
 
 /* media */
-@media (max-width: 1145px) {
+@media (max-width: 774px) {
   .card-main h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .card-points h4 {
+    font-size: 1.15rem;
+  }
+
+  .card-points h5 {
+    font-size: 0.8rem;
   }
 
   .card-duplicate div,
@@ -136,26 +144,6 @@ export default {
   .card-edit i {
     padding-right: 2px;
     font-size: 9px;
-  }
-}
-
-@media (max-width: 991px) {
-  .card-main h3 {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 774px) {
-  .card-main h3 {
-    font-size: 0.9rem;
-  }
-
-  .card-points h4 {
-    font-size: 1.15rem;
-  }
-
-  .card-points h5 {
-    font-size: 0.8rem;
   }
 }
 
