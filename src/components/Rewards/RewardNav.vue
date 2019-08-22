@@ -27,8 +27,7 @@ export default {};
   border-top: 1px solid #dddee3;
   background: white;
 }
-.nav-item {
-}
+
 a {
   font-weight: 500;
   padding: 2rem 2rem 0.2rem 2rem;

@@ -1,21 +1,21 @@
 <template>
   <div class="container">
     <!-- campaign div -->
-    <div class="campaign" v-if="mess">
+    <div class="campaign" v-if="msg">
       <div class="row px-0">
         <div class="col-sm-6">
           <div
             class="d-flex flex-column justify-content-center campaign-title pl-1"
-            @click="messUpdate"
+            @click="msgUpdate"
           >
             <h4 class="mb-0">Convertproof</h4>
-            <p class="mt-0">You have {{cam[0]}} CTA in this campaign</p>
+            <p class="mt-0">You have {{stat[0]}} CTA in this campaign</p>
           </div>
         </div>
 
         <div class="col-sm-6">
           <div class="d-flex justify-content-between py-sm-4 pr-1 pr-md-5 campaign-body">
-            <CamStatistics :cama="cam" />
+            <CamStatistics :stat="stat" />
           </div>
         </div>
       </div>
@@ -26,10 +26,10 @@
     <!-- -- --- --- end campaign div --- --- --- -- -->
 
     <!-- start of cvt proof div -->
-    <div id="cvtproof" v-if="!mess">
+    <div id="cvtproof" v-if="!msg">
       <div class="cvtproof d-flex justify-content-between py-4 px-4">
         <div class="cvtproof-brand d-flex align-items-center">
-          <div class="cvtproof-icon mr-1 mr-sm-4" @click="mess=!mess">
+          <div class="cvtproof-icon mr-1 mr-sm-4" @click="msg=!msg">
             <i class="fas fa-caret-left"></i>
           </div>
 
@@ -62,7 +62,7 @@
               <h4>Buy page</h4>
             </div>
             <div class="col-md-6 pr-lg-5">
-              <CamStatistics :cama="cam" />
+              <CamStatistics :stat="stat" />
             </div>
           </div>
         </div>
@@ -77,15 +77,15 @@ export default {
   components: {
     CamStatistics
   },
-  props: ["cam"],
+  props: ["stat"],
   data() {
     return {
-      mess: true
+      msg: true
     };
   },
   methods: {
-    messUpdate: function() {
-      this.mess = false;
+    msgUpdate: function() {
+      this.msg = false;
     }
   }
 };

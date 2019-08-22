@@ -1,38 +1,38 @@
 <template>
   <div class="container-fluid px-0 my-3">
-    <div class="milestoneCon d-flex justify-content-between">
+    <div class="milestone__container d-flex justify-content-between">
       <!-- milestone button and line -->
-      <div class="milestoneEntry">
-        <div class="mEntry d-none d-sm-block">
+      <div class="milestone__entry">
+        <div class="mentry__wrapper d-none d-sm-block">
           <h5 class="text-center">Milestone</h5>
-          <div class="btnn">Entry</div>
+          <div class="entry--text">Entry</div>
         </div>
-        <div class="lineCycle">
-          <div class="mLine"></div>
-          <div class="mCycle">1</div>
+        <div class="linecycle--wrapper">
+          <div class="div--line"></div>
+          <div class="div--cycle">1</div>
         </div>
       </div>
       <!-- milestone cards -->
-      <div class="cardMilestone bg-white mr-0 mb-5 pb-3">
-        <div class="titleMilesWrapper">
-          <h4 class="titleMiles">Title of Milestone</h4>
+      <div class="cardmilestone__container bg-white mr-0 mb-5 pb-3">
+        <div class="title__wrapper">
+          <h4 class="title">Title of Milestone</h4>
           <span class="awesome">
             <i class="fa fa-ellipsis-h fas-absolute"></i>
           </span>
         </div>
         <div class="d-sm-none d-flex mb-4 pl-2">
           <h5 class="text-center pr-3">Milestone</h5>
-          <div class="btn-entry">Entry</div>
+          <div class="div--entry">Entry</div>
         </div>
-        <h5 class="hh5">Rewards</h5>
-        <div class="rewardItems d-flex justify-content-between pl-0">
+        <h5 class="h5--rewards">Rewards</h5>
+        <div class="reward__items d-flex justify-content-between pl-0">
           <div class="row rewardCards">
-            <EntryCard />
-            <EntryCard />
-            <PointsCard />
+            <EntryCard :items="items[1]" />
+            <EntryCard :items="items[0]" />
+            <EntryCard :items="items[1]" />
           </div>
 
-          <div class="rewardCon">
+          <div class="reward__container">
             <button class="btn-primary">+</button>
             <h5>Add Reward</h5>
           </div>
@@ -43,16 +43,22 @@
 </template>
 <script>
 import EntryCard from "./EntryCard";
-import PointsCard from "./PointsCard";
 export default {
   components: {
-    EntryCard,
-    PointsCard
+    EntryCard
+  },
+  data: function() {
+    return {
+      items: [
+        { id: 1, text: "400 points", color: "point--square" },
+        { id: 2, text: "entry", color: "enter--radius" }
+      ]
+    };
   }
 };
 </script>
 <style scoped>
-.cardMilestone {
+.cardmilestone__container {
   padding-top: 9px;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.13);
   flex: 1;
@@ -65,7 +71,7 @@ export default {
   left: 95%;
 }
 
-.titleMilesWrapper {
+.title__wrapper {
   position: relative;
 }
 
@@ -74,7 +80,7 @@ export default {
   margin-left: 9.6rem;
 }
 
-.milestoneEntry {
+.milestone__entry {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,19 +89,19 @@ export default {
   padding-left: 1rem;
 }
 
-.milestoneEntry h5 {
+.milestone__entry h5 {
   font-size: 17px;
   font-weight: 4;
 }
 
-.lineCycle {
+.linecycle--wrapper {
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
 }
 
-.mLine {
+.div--line {
   background-color: #e4e1e1;
   border-radius: 10px;
   height: 100%;
@@ -105,7 +111,7 @@ export default {
   left: 0;
 }
 
-.mCycle {
+.div--cycle {
   width: 41px;
   height: 41px;
   background: blue;
@@ -121,15 +127,15 @@ export default {
   transform: translateX(calc(-50% + 4px));
 }
 
-.mEntry {
+.mentry__wrapper {
   margin-top: 8px;
 }
 
-.mEntry h5 {
+.mentry__wrapper h5 {
   margin-bottom: 4px;
 }
 
-.titleMiles {
+.title {
   margin-top: 15px;
   margin-bottom: 3rem;
   margin-left: 9px;
@@ -137,7 +143,7 @@ export default {
   color: #67758d;
 }
 
-.hh5 {
+.h5--rewards {
   text-transform: uppercase;
   margin-bottom: 1.1rem;
   font-size: 17px;
@@ -145,7 +151,7 @@ export default {
 }
 
 /*  */
-.btn-entry {
+.div--entry {
   display: flex;
   padding: 0 20px;
   align-items: center;
@@ -157,7 +163,7 @@ export default {
   font-weight: 500;
 }
 
-.btnn {
+.entry--text {
   padding: 3px 26px;
   border: none;
   text-transform: uppercase;
@@ -223,14 +229,14 @@ export default {
   border-right: 2px solid #f0f1f3;
 }
 
-.rewardCon {
+.reward__container {
   width: 11%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.rewardCon h5 {
+.reward__container h5 {
   font-size: 15px;
   text-align: center;
 }
@@ -300,7 +306,7 @@ export default {
     left: 58%;
   }
 
-  .rewardCon h5 {
+  .reward__container h5 {
     font-size: 13px;
   }
 
@@ -319,21 +325,21 @@ export default {
 }
 
 @media (max-width: 575px) {
-  .milestoneEntry {
+  .milestone__entry {
     width: 10px;
   }
 
-  .rewardCon h5 {
+  .reward__container h5 {
     font-size: 10px;
   }
 
-  .titleMiles {
+  .title {
     margin-bottom: 2rem;
   }
 }
 
 @media (max-width: 375px) {
-  .titleMiles {
+  .title {
     font-size: 1.4rem;
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <CamHeader />
-    <CamBody :cam="stat" />
+    <CamBody :stat="stat" />
   </div>
 </template>
 <script>

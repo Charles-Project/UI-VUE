@@ -1,5 +1,5 @@
 <template>
-  <div class="milestoneBtn d-flex justify-content-center my-5">
+  <div class="d-flex justify-content-center my-5">
     <button class="btn btn-primary">MILESTONES/REWARDS</button>
     <button class="btn btn-outline-secondary">REWARDABLE ACTIONS</button>
   </div>
